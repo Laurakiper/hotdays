@@ -170,7 +170,9 @@
 
       try {
         if (SCRIPT_URL.startsWith('https://')) {
-          await fetch(SCRIPT_URL, {
+          // Si Google tarda más de 4 s, seguimos a gracias (el registro igual llega)
+          const timeout = new Promise((resolve) => setTimeout(resolve, 4000));
+          await Promise.race([timeout, fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
             body: new URLSearchParams({
@@ -179,8 +181,9 @@
               correo,
               consent: 'true',
               origen: 'landing-hotdays-early-access'
-            })
-          });
+            }),
+            keepalive: true
+          })]);
         } else {
           console.warn('SCRIPT_URL no está configurada: el registro no se guardó.');
         }
