@@ -333,18 +333,16 @@ a:hover { color: var(--blue); }
   .site-header .logo { height: 64px; }
   .site-header .btn-pill { display: none; }
 
-  /* En celular: foto corta arriba, luego texto y formulario, contador al final */
+  /* En celular: sin foto; texto y formulario, contador al final */
   .hero { gap: 20px; padding-bottom: 32px; padding-top: 0; }
   .visual { display: contents; }
-  .photo { order: 0; min-height: 0; height: 280px; border-radius: 24px; flex-grow: 0; }
-  .photo img { object-position: center 35%; }
+  .photo { display: none; }
   .hero-copy { order: 1; gap: 18px; }
   .countdown { order: 2; padding: 14px 16px; border-radius: 20px; gap: 8px; }
   .countdown .when { display: none; }
   .countdown .num { font-size: 26px; }
   .countdown .unit { padding: 8px 4px; border-radius: 10px; }
   .vtext { display: none; }
-  .chip { left: 12px; top: 12px; padding: 8px 12px; font-size: 12px; }
 
   .badge { font-size: 13px; padding: 6px 12px 6px 6px; }
   .hero h1 { font-size: 48px; }
