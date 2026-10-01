@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>¡Ya estás en la lista! · Hot Days Kiper</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <span class="dot teal" aria-hidden="true"></span>
+    <span>Registro confirmado · Acceso anticipado el 15 de octubre a las 12:00 a. m.</span>
+  </div>
+
+  <header class="wrap site-header">
+    <a href="./" aria-label="Hot Days Kiper, inicio">
+      <img class="logo" src="assets/hotdays-kiper.png" alt="Hot Days Kiper" width="336" height="320">
+    </a>
+  </header>
+
+  <main class="wrap hero thanks">
+    <div class="hero-copy">
+      <div class="check" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#18132E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
+
+      <h1 class="display">¡Ya estás<br>en la lista<span id="nombre"></span>!</h1>
+
+      <p class="lead">Pendiente de tu correo electrónico: <strong style="color:#18132E">el 15 de octubre a las 12:00 a. m.</strong> te enviaremos el link exclusivo para comprar en Hot Days antes que nadie.</p>
+
+      <div class="card">
+        <div class="mail-row">
+          <div class="mail-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F0EDE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div>
+            <small>Te lo enviaremos a</small>
+            <strong id="correo">tu correo electrónico</strong>
+          </div>
+        </div>
+        <ul class="tips">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3399CC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <span>Si no lo ves en tu bandeja de entrada, revisa Spam o Promociones.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3399CC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <span>Agrega [correo@kiper] a tus contactos para que no se pierda.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3399CC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <span>El link es personal y solo funciona para compras anticipadas.</span>
+          </li>
+        </ul>
+      </div>
+
+      <a class="btn-outline" href="./">Volver al inicio</a>
+    </div>
+
+    <div class="visual">
+      <div class="photo">
+        <img src="assets/nino-kiper.jpg" alt="Niño con los brazos cruzados usando un reloj inteligente Kiper" width="540" height="608">
+        <div class="photo-banner">
+          <span class="kicker">Revisa tu correo el</span>
+          <span class="date">15 oct · 12:00 a. m.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Kiper · Hot Days</span>
+    </div>
+  </footer>
+
+  <script>
+    try {
+      const n = sessionStorage.getItem('hd_nombre');
+      const c = sessionStorage.getItem('hd_correo');
+      if (n) document.getElementById('nombre').textContent = ', ' + n;
+      if (c) document.getElementById('correo').textContent = c;
+    } catch (e) {}
+  </script>
+</body>
+</html>
